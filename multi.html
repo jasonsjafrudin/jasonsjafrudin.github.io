@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jason Sjafrudin Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Jason Sjafrudin</a>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="/PDFfiles/Jason Sjafrudin Resume.pdf">CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/jason-s-a87119153" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="index.html" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">2018</span>
+									<h1>Multiple Linear Regression to Analyze How PM2.5 Air Pollution Affects Our Life Expectancy
+									</h1>
+								</header>
+								<div class="image main"><img src="images/MultiRegressionPic.jpg" alt="" /></div>
+								<p><u>Background:</u><br>
+									During Fall 2018, I had taken an econometrics class at UC Berkeley that involved writing a research paper that deals with analyzing the relationship between ANY 2 variables of your choosing.
+								<br>During this time, I had just witnessed and experienced the wildfire that occurred in California, which later became the deadliest in all California history. Inspired by this horrific event, I became curious to know how PM2.5 air pollution is affecting the life expectancy of the population on planet earth, and to what degree it is affecting it. As a result, I decided to build a multiple linear regression model to analyze this very question.
+								</p>
+								<p><u>Solution:</u><br>
+									For my multiple linear regression model, in addition to PM2.5 as my independent variable, I also I included 1) Gross National Income per capita in dollars, 2) Poverty, measured by headcount of people earning under 1.90 dollars per day, 3) Gini Index, which measures income inequality, 4) smoking prevalence, and 5) dollars amount spent on healthcare per capita as these are some of the major factors as well affecting our life expectancy. 
+									<br>
+									<br><img src="images/multi1.png" style="width:330px;height:auto;"  alt="" /><img src="images/multi2.png" style="width:330px;height:auto;"  alt="" />
+								<br>
+								<img src="images/multi3.png" style="width:660px;height:auto;"> 
+								<br><br>
+								My project consists of four models. In the first model, I ran the regression of life expectancy on the PM2.5, poverty headcount ratio, GNI per capita, and health care spending per capita. To avoid omitted variable bias, I included two more independent variable, namely smoking and Gini Index in the second model. In the third model, I included time fixed effects to control for omitted variables that are hard to measure but constant for all the countries and vary through years. In the fourth model, I included robust standard error to control for heteroskedasticity. All outputs are generated in the statistical software, STATA.
+								<br>
+								The data used for my models are all collected from the World Bank website (Note: The data collected is from 2011 to 2015 from 264 countries).
+								<br>
+								<img src="images/multi4.png" style="width:660px;height:auto;"> 
+								<br>
+								<img src="images/multi5.png" style="width:660px;height:auto;"> 
+								<br>
+								Life expectancyit = α + β1PM2.5it + β2Povertyit + β3log(Healthcare expenditure)it + β4log(GNI per capita)it + β5Smokingit + β6Gini indexit + uit i = 264 countries and regions listed on dataset from World Bank t = 2011, 2012, 2013, 2014, 2015
+								
+
+
+
+
+
+
+								</p>
+								<p><u>Conclusion:</u><br>
+									Overall, the results show that PM2.5 negatively affect life expectancy. With increasing PM2.5, life expectancy is expected to decrease; 1 unit increase in PM2.5 is expected to decrease life expectancy by 0.0325224 year. The coefficients of poverty and log(GNI) per capita show that socioeconomic conditions do affect life expectancy. Poverty would negatively affect life expectancy, while log(GNI) per capita would positively affect life expectancy. Furthermore, healthcare expenditure is also one of the two independent variable that would also positively affect life expectancy. However, surprisingly, I found that Gini index, even though with a negative coefficient, does not play a really important role in life expectancy since the pvalue is large (0.326). And finally, I have also come to discover that smoking does indeed negatively affect life expectancy.								
+								</p>
+								<ul class="actions special">
+									<li><a href="/PDFfiles/Jason Sjafrudin_Research Paper.pdf" download class="button">Download Full Paper</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2><a href="mailto:jasonsjafrudin1@gmail.com">CONTACT ME</a></h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p><a href="https://www.nationalgeographic.com/science/article/earth">Planet Earth</a></p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="tell:4155219076">(415) 521-9076</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:jasonsjafrudin1@gmail.com">jasonsjafrudin1@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/jason-s-a87119153" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="index.html" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Jason Sjafrudin</li><li>Design: <a href="https://html5up.net">Massively</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

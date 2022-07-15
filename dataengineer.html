@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jason Sjafrudin Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo">Jason Sjafrudin</a>
+				</header>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="/PDFfiles/Jason Sjafrudin Resume.pdf">CV</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/jason-s-a87119153" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="index.html" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">2019-2023</span>
+									<h1>Data Engineering Projects</h1>
+								</header>
+								<div class="image main"><img src="images/DataEngineeringPic.jpg" alt="" /></div>
+								<p>
+									My experiences have allowed me to work with various technologies for creating data pipelines across many enterprises. Here, I outlined some of my favorite data engineering projects as well as the technologies and solutions used for performing ETL.
+								</p>
+								<p>
+									The 4 main technologies I have utilized to create these pipelines include:
+									<br>1) Python
+									<br>2) SQL
+									<br>3) SSIS- SQL Server Integration Services 
+									<br>4) Power Query
+								</p>
+								<p>
+									<br><u>Python</u>
+									<br><br>Today, Python has become one of the most popular tools for performing ETL tasks due to its ease of use and extensive libraries for accessing databases and storage technologies. In the context of using Python for ETL, there are many workflow management systems available to use. This is personally one of my favorite technologies to work with for building data pipelines.
+									<br><br>During my time as a Data Engineer at T-Mobile, I was working in the Digital Performance Analytics team where we were responsible for each and every step in the software development life cycle to drive actionable data insights within the digital/web platform of the organization.  
+									<br><br>My responsibilities include developing pipelines with Python in Azure Databricks to extract, merge, transform, and load data from on-premises and cloud data centers such as Teradata, SQL Server, Adobe Analytics, GCP, and Azure Synapse Analytics respectively. These pipelines are then mainly used as the data sources for our reporting applications, such as tableau, Power BI, and SSRS Report Builder for BI reporting needs. As our pipelines are deployed to production, Databricks provides an easy-to-use scheduling system to automatically run the pipelines periodically.
+									<br><br><img src="images/de1.png" style="width:800px;height:auto;" > <br><font size="-2">(Azure Databricks Pipeline UI)</font>
+									<br><br>
+									In addition to integrating data from on-premises and cloud data centers, I have also extracted datasets from websites with Python in SSMS. 
+									<br><br>During my employment with Health Plan of San Joaquin (HPSJ) as a Senior Data Analyst, our reporting data warehouse had a lot of missing data concerning the providers information. Many of these missing information however could be found on the California Government website as all PCPs within the CA state must be registered through the state portal. As a result, I performed web scraping in SQL Server with Python from the ca gov website to populate the tables in SQL Server to account for those missing data. 
+									<br><br>I started by installing BeatifulSoup, a python library designed to facilitate screen scraping, followed by requests. I had then retrieved and parse the html of the target page. This is followed by locating and pulling the table/dataset I am interested in on the web page. And finally, after some data cleansing and transformation based on our business requirements, I have imported and merged it into our SQL Server objects.
+									<br><br><img src="images/de2.png" style="width:800px;height:auto;" > <br> <font size="-2">(SSMS Web Scraping Pipeline UI)</font>
+									<br><br>
+									<b>Tech stack:</b> Python, SQL, Azure Databricks, Teradata, SSMS, Adobe Analytics, BigQuery, Azure Synapse Analytics, HTML
+								</p>
+								<p>
+									<br>
+									<u>SQL</u>
+									<br><br>The common ETL process typically involves extracting data from one source file into a separate target file location. However, a pipeline for performing ETL can simply involve one or more stored procedures that themselves extract, transforms, and loads data within a relational database system. The SQL commands facilitate this part of ETL as they fetch data from different tables and even separate databases.
+									<br><br>During my employment with Columbia Sportswear, our centralized data warehouse mainly consisted of objects built and updated through stored procedures in SQL Server. To begin with, raw data in its purest form are imported into the relational database from our internal systems through SSIS packages. Stored procedures are then built with SQL to create and update the dimension and fact tables by referencing and transforming the raw data, applying business roll-ups, and structuring the data to fit the needs of the consumers, including analysts, data scientists, and executives to inspect all of the data available reliably, quickly, and securely.									
+									<br><br><img src="images/de3.png" style="width:800px;height:auto;"> <br><font size="-2">(SSMS SP Pipeline UI)</font>
+									<br><br>
+									After developing our stored procedures, we set up SQL Jobs through SQL Server Agent to periodically execute our SP automatically and account for the updates, adds, and deletes of our dimensions and fact tables. 
+									<br><br><img src="images/de4.png" style="width:500px;height:auto;"> 
+									<br><br>
+									<b>Tech Stack:</b> SQL, SQL Server Management Studio (SSMS), SQL Server Agent, SSIS, Full Circle, SharePoint Site Content
+								</p>
+								<p>
+									<br>
+									<u>SSIS - SQL Server Integration Services</u>
+									<br><br>During my employment with Health Plan of San Joaquin (HPSJ), I had performed ETL strategy with SSIS packages. We build SSIS packages in BIDS (Business Intelligence Development Studio) to merge data from heterogeneous sources, and perform data profiling, data cleansing, and standardization, before populating our data warehouses in SQL Server. The SSIS package includes all the necessary components, such as the connection manager, tasks, control flow, data flow, parameters, event handlers, and variables, to execute the ETL task.
+									<br><br>As our packages extract and transform data from the internal systems of HPSJ, we load/dump it to SQL Server in 3 different stages/layers.
+									<br><br>1) First layer contains all the historical data coming from the internal systems. In this layer, there is no transformation performed.
+									<br>2) Second layer (staging database) only contains active data or “present” data of the internal systems. In this layer, transformations are done to derive attributes that meet the business needs. We also perform data profiling and cleansing (such as data conversion, lookup transformation, fuzzy lookup, etc.) during this stage.
+									<br>3) Third layer is the server that will be used to connect to all our reporting applications. In this layer, we take existing data from the second layer and further normalize it to an ideal state for BI reporting.
+									<br><br>As our SSIS packages are built and deployed, we schedule jobs to execute the packages automatically with SQL Server Agent.
+									<br><br><img src="images/de5.png" style="width:600px;height:auto;"><br> <font size="-2">(SQL Server Integration Services ETL workflow UI)</font>
+									<br><br>
+									<b>Tech Stack:</b> SQL Server Integration Services (SSIS), SQL, Python, QNXT, MSExcel, SSMS
+								</p>
+								<p>
+									<br>
+									<u>Power Query:</u>
+									<br><br>With extensive experiences of working with Power BI, it has helped me discover Power Query as a powerful ETL engine. While working with PBI, I have come to learn that it is more than just a data visualization tool, it is a collection of services, apps, and connectors. When you connect to a data source in Microsoft Power BI, underneath the connection is Power Query, a powerful ETL engine that is also available in many other products such as SSAS and Excel.
+									<br><br>While I was working for Columbia Sportswear (prAna), I utilized Power Query and Power BI Dataflows for performing ETL strategy to build an enterprise-level data cube that ended up supporting 200+ reports and dashboards throughout the organization. I employed M language in Power Query to connect to various on-premises and cloud data centers and apply various transformations such as sorting, grouping, column splitting, etc. to fit the business needs. Amongst the various sources I have connected to with Power Query, I have also integrated the cube with Power BI Dataflows that I have created and managed in the workspaces of PBI Service where results are stored to Azure Data Lake Storage Gen2.
+									<br><br>As our cube is published to the workspace, I have scheduled automated refreshes that will automatically trigger all steps within Power Query to be executed for each refresh.
+									<br><br><img src="images/de6.png" style="width:800px;height:auto;"> <br><font size="-2">(PBI Power Query Pipeline UI)</font>
+									<br><br>
+									<b>Tech Stack:</b> SQL, M, DAX, PowerQuery, Power BI, SQL Server Management Studio, Sharepoint Online, DAX Studio
+								</p>
+								<p>
+									<br>
+									<b><u>Summary:</u></b>
+									<br>We are entering a new era where data acts as the common denominator to making decisions in all aspects of life. Data engineering is at the epicenter of this data revolution movement. Without data engineering, we risk missing out on the full value of data at our disposal. I am thankful for the DE projects and opportunities I have experienced that have taught me the skills and importance of this field. I am excited and look forward to continue optimizing data towards usability for our data-driven future.
+								</p>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2><a href="mailto:jasonsjafrudin1@gmail.com">CONTACT ME</a></h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p><a href="https://www.nationalgeographic.com/science/article/earth">Planet Earth</a></p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="tell:4155219076">(415) 521-9076</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:jasonsjafrudin1@gmail.com">jasonsjafrudin1@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/jason-s-a87119153" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="index.html" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Jason Sjafrudin</li><li>Design: <a href="https://html5up.net">Massively</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
