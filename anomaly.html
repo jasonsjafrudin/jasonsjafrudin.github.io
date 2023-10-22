@@ -46,7 +46,11 @@
 									In the world of data analytics, poor quality data is one of the biggest challenges we face. Nothing is more harmful to data analytics than inaccurate data. Without good input, output will be unreliable. Common causes of inaccurate data include manual errors made during data entry, asymmetrical data: when information in one system does not reflect the changes made in another system, leaving it outdated, and many more. This can lead to significant negative consequences if the analysis is used to influence decisions. During my project with one of the largest telecommunication industries in the United States, T-Mobile, I had implemented statistical methods to build an anomaly detection model for performing data quality checks.
 									</p>
 								<p><u>Solution:</u><br>
-									To start with, I extracted all digital web calculated metrics and KPI values for each day within the past couple of years, these include the web visits, cart starts, checkouts, orders, activations, etc. from 2020 to 2022. 
+									To start with, i use the method of moments statistical technique to fit the dataset distribution to a Gaussian distribution. 
+									<br>
+									I then performed statistical tests, in this case the Kolmogorov-Smirnov test, in which I was able to reject the null hypotheses and confirm the alignment of dataset distribution with gaussian distribution. 
+									<br>
+									After that, I extracted all digital web calculated metrics and KPI values for each day within the past couple of years, these include the web visits, cart starts, checkouts, orders, activations, etc. from 2020 to 2022. 
 									<br>
 									I then generated a measure calculation that returns 2 values, ‘Anomaly’ or ‘Expected’. The logic behind the measure compares the metric/KPI on one single particular day against the window average of that same metric/KPI within the past month from that date. It follows the Empirical Rule that states that 99.7% of data observed (following a normal distribution) lies within 3 standard deviations of the mean. Therefore, if the metric value is over or below 3 standard deviations from the month window average, then it is an ‘Anomaly’, else it is ‘Expected’.
 								<br>
