@@ -43,20 +43,19 @@
 								</header>
 								<div class="image main"><img src="images/phishingPic.jpg" alt="" /></div>
 								<p><u>Background:</u><br>
-									During my employment with Health Plan of San Joaquin (HPSJ), I had taken on various fun projects, one being the development and maintenance of a phishing email predictive model.
+									During my employment with Health Plan of San Joaquin (HPSJ), I had taken on various fun projects, one being the development and maintenance of a phishing email predictive model with Scikit-learn in Python.
 									<br> While data confidentiality is important when working in any type of industry, it is especially vital for a healthcare organization to keep their patient’s information safe and secure as it has the potential to physically harm people. That being said, phishing remains one of the major causes of breaches in this type of industry.  As a result, we took the initiative to start lending our fellow employees a helping hand in detecting phishing emails through machine learning.
 									</p>
 								<p><u>Solution:</u><br><br>
 									<img src="images/phishingworkflow.png" ><br><br>
 									At a high level, we have constructed a standard workflow where we begin by collecting mail data (both phishing and non-phishing emails), process the data and convert these text mails into meaningful key values for the machine to process, and train our logistic regression model by feeding these key values.
-									<br>We will continue to add more data periodically to our training dataset until we have a good trained logistic regression model that can accurately process new mails and predict if an email is phishing or not. 
+									<br>We split our dataset into training and testing samples to train and test our model in its ability to accurately process new mails and predict if an email is phishing or not.
 								<br><br><img src="images/phishingsampledataset.png" ><font size="-1">Sample of the mail dataset (screenshot uses dummy/mock dataset)</font>
 								<br><br><img src="images/phishingcode.png" ><font size="-1">Main code to convert these text mails into meaningful key values (feature vectors) for the machine (logistic regression) to process</font>
 								<br><br><img src="images/phishingcode2.png" ><font size="-1">Training the logistic regression model and validating the accuracy of the model</font>
 								</p>
 								<p><u>Conclusion:</u><br>
-									Currently, the accuracy of our model ranges from 75%-85%. The company will continue to train our logistic regression model with increasing amounts of data to reach an accuracy range of 80%-90% before pushing it to production.
-								<br>In conclusion, working for a healthcare company has taught me how sensitive data can be and the importance of keeping our patient’s information confidential and safe from phishing attacks. I am happy to have been a part of the initiative to deal with this very issue through machine learning. 
+									Our logistic regression model successfully achieved a precision score of 80%. In conclusion, working for a healthcare company has taught me how sensitive data can be and the importance of keeping our patient’s information confidential and safe from phishing attacks. I am happy to have been a part of the initiative to deal with this very issue through machine learning. 
 															</p>
 
 							</section>
